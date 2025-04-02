@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Financeira</title>
+  <link rel="stylesheet" href="calculo.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="negociofacil.html">Home</a></li>
+      <li class="dropdown"><a href="#" class="Marketing">Faça seu Marketing</a>
+        <ul class="dropdown-menu">
+          <li><a href="https://business.instagram.com/" target="_blank">Instagram for Business</a></li>
+          <li><a href="https://www.facebook.com/business/" target="_blank">Facebook Business</a></li>
+          <li><a href="https://ads.google.com/intl/pt_BR/home/?pli=1" target="_blank">Google Ads</a></li>
+          <li><a href="https://ads.tiktok.com/business/pt-BR?tt4b_lang_redirect=1" target="_blank">TikTok for Business</a></li>
+          <li><a href="https://www.youtube.com/ads/" target="_blank">YouTube Ads</a></li>
+          <li><a href="https://ads.pinterest.com/" target="_blank">Pinterest Ads</a></li>
+          <li><a href="https://www.taboola.com/" target="_blank">Taboola Brasil</a></li>
+          <li><a href="https://www.outbrain.com/" target="_blank">Outbrain</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="ARTES">Faça sua arte</a>
+        <ul class="dropdown-menu">
+          <li><a href="https://www.canva.com/" target="_blank" rel="noopener noreferrer">Canva</a></li>
+          <li><a href="https://www.adobe.com/express/" target="_blank" rel="noopener noreferrer">Adobe Express</a></li>
+          <li><a href="https://create.vista.com/pt/" target="_blank" rel="noopener noreferrer">VistaCreate</a></li>
+          <li><a href="https://www.fotor.com/" target="_blank" rel="noopener noreferrer">Fotor</a></li>
+          <li><a href="https://snappa.com/" target="_blank" rel="noopener noreferrer">Snappa</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <div class="container">
+    <h1>Saúde Financeira da sua Empresa</h1>
+    <p>Preencha os campos abaixo para verificar a saúde financeira do seu Negócio.</p>
+
+    <form id="balancoForm">
+      <div class="input-container">
+        <div class="input-group">
+          <label for="receitaMensal">Receita Mensal (R$):</label>
+          <div class="input-wrapper">
+            <input type="number" id="receitaMensal" placeholder="Exemplo: 5000 (soma das vendas)">
+            <span class="help" data-tooltip="É a soma de todas as fontes de faturamento, incluindo vendas, serviços prestados e outras entradas financeiras relacionadas à atividade comercial da sua empresa. ">?</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="despesaMensal">Despesas Mensais (R$):</label>
+          <div class="input-wrapper">
+            <input type="number" id="despesaMensal" placeholder="Exemplo: 3000 (aluguel, insumos)">
+            <span class="help" data-tooltip="Soma de todos os gastos fixos e variáveis, como aluguel, conta de luz, salário dos funcionários e compra de ingredientes.">?</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="margemEsperada">Margem de Lucro Esperada (%):</label>
+          <div class="input-wrapper">
+            <input type="number" id="margemEsperada" placeholder="Exemplo: 20 (lucro esperado)">
+            <span class="help" data-tooltip="Percentual de lucro desejado sobre sua receita. Exemplo: se deseja que 20% do faturamento seja lucro, insira 20.">?</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="ativoTotal">Ativo Total (R$):</label>
+          <div class="input-wrapper">
+            <input type="number" id="ativoTotal" step="0.01" placeholder="Exemplo: 15000 (máquinas, dinheiro)">
+            <span class="help" data-tooltip="Total de bens e recursos da empresa, como equipamentos, móveis, estoque e saldo em caixa. Exemplo: se tem R$ 10.000 em equipamentos e R$ 5.000 no caixa, insira 15000.">?</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="passivoTotal">Passivo Total (R$):</label>
+          <div class="input-wrapper">
+            <input type="number" id="passivoTotal" step="0.01" placeholder="Exemplo: 5000 (empréstimos, contas)">
+            <span class="help" data-tooltip="Valor total de suas dívidas e obrigações financeiras, como empréstimos, contas a pagar e financiamentos. Exemplo: se deve R$ 3.000 em aluguel atrasado e R$ 2.000 de um empréstimo, insira 5000.">?</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="custosFixos">Custos Fixos (R$):</label>
+          <div class="input-wrapper">
+            <input type="number" id="custosFixos" step="0.01" placeholder="Exemplo: 2000 (aluguel, água, luz)">
+            <span class="help" data-tooltip="Gastos que não mudam mês a mês, como aluguel, internet, telefone e salários fixos. Exemplo: se paga R$ 1.500 de aluguel e R$ 500 de internet, insira 2000.">?</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="margemContribuicao">Margem de Contribuição (%):</label>
+          <div class="input-wrapper">
+            <input type="number" id="margemContribuicao" step="0.01" placeholder="Exemplo: 40 (porcentagem do lucro bruto)">
+            <span class="help" data-tooltip="Percentual da receita que sobra após descontar os custos variáveis, como ingredientes e embalagens. Exemplo: se vende um prato por R$ 50 e gasta R$ 30 em ingredientes, sua margem de contribuição é 40%.">?</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button type="submit" id="calcularBtn">Calcular</button>
+        <button type="button" id="recomeçarBtn">Recomeçar</button>
+      </div>
+    </form>
+
+    <section id="resultados-container">
+      <h2>Resultados</h2>
+      <div class="chart-container">
+        <canvas id="pieChart"></canvas>
+      </div>
+      <div id="text-results">
+        <p>Os resultados aparecerão aqui.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Precifica Fácil. Todos os direitos reservados.</p>
+    <a href="terms.html">Termos de Uso</a> |
+    <a href="privacy.html">Política de Privacidade</a>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="calculo.js"></script>
+</body>
+</html>
